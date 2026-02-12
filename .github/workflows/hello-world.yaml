@@ -3,8 +3,21 @@ name: CI
 on: [push]
     
 jobs:
-    run-shell-command:
+    echo-hello:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - run: echo "hello world"
+            - name: say hello
+              run: echo "hello world"
+
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: failed step
+              run: |
+                - echo "I will fail"
+                - exit 1
+
+            - name: say goodbye
+              run: echo "goodbye world"
+
+
