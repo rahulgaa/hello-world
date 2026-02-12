@@ -6,4 +6,5 @@ jobs:
         runs-on: windows-latest
         steps: 
             - name: windows os runner
+              shell: bash
               run: echo "OS of this runner is $RUNNER_OS"
