@@ -19,5 +19,8 @@ jobs:
 
             - name: say goodbye
               run: echo "goodbye world"
+            - name: show runner OS
+              run: echo "Runner OS is $RUNNER_OS"
+
 
 
