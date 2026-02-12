@@ -1,0 +1,9 @@
+name : windows-runner
+on: [push]
+
+jobs:
+    echo-windows-runner:
+        runs-on: windows-latest
+        steps: 
+            - name: windows os runner
+              run: echo "OS of this runner is $RUNNER_OS"
